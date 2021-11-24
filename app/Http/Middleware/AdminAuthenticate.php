@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminAuthenticate
 {
@@ -16,7 +17,7 @@ class AdminAuthenticate
      */
     public function handle(Request $request, Closure $next)
     {
-        if(session('role') === 'adm'){
+        if(Auth::user()->role === 'adm'){
             return $next($request);
         }else{
             session()->flush();

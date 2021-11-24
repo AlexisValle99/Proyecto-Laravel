@@ -129,7 +129,7 @@ ol {
 	right: 0;
 	height: 4px;
 	width: 80px;
-	background: #7fad39;
+	background: #cc0e0e;
 	content: "";
 	margin: 0 auto;
 }
@@ -167,8 +167,9 @@ ol {
 	color: #ffffff;
 	text-transform: uppercase;
 	font-weight: 700;
-	background: #7fad39;
+	background: #004bac;
 	letter-spacing: 2px;
+    margin: 0 4px;
 }
 
 .site-btn {
@@ -178,7 +179,7 @@ ol {
 	text-transform: uppercase;
 	display: inline-block;
 	padding: 13px 30px 12px;
-	background: #7fad39;
+	background: #0076bd;
 	border: none;
 }
 
@@ -510,7 +511,7 @@ ol {
 }
 
 .header__menu ul li.active a {
-	color: #7fad39;
+	color: #0076bd;
 }
 
 .header__menu ul li:hover .header__menu__dropdown {
@@ -606,13 +607,13 @@ ol {
 	display: none;
 }
 
+.txt-danger{
+    color: #d00000 !important;
+}
+
 /*---------------------
   Hero
 -----------------------*/
-
-.hero {
-	padding-bottom: 50px;
-}
 
 .hero.hero-normal {
 	padding-bottom: 30px;
@@ -637,7 +638,7 @@ ol {
 }
 
 .hero__categories__all {
-	background: #7fad39;
+	background: #002d26;
 	position: relative;
 	padding: 10px 25px 10px 40px;
 	cursor: pointer;
@@ -1092,6 +1093,7 @@ ol {
 	display: flex;
 	align-items: center;
 	padding: 45px 0 40px;
+    background-color: #00465b;
 }
 
 .breadcrumb__text h2 {
@@ -1305,6 +1307,11 @@ ol {
 
 .product {
 	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.dashboard {
+	padding-top: 30px;
 	padding-bottom: 80px;
 }
 
@@ -1588,6 +1595,7 @@ ol {
 	height: 270px;
 	position: relative;
 	overflow: hidden;
+    background: #e8e8e8;
 }
 
 .product__item__pic__hover {
@@ -1755,6 +1763,12 @@ ol {
 	color: #dd2222;
 	font-weight: 600;
 	margin-bottom: 15px;
+}
+
+.product__details__price span {
+    font-size: 16px;
+    color: #b2b2b2;
+    margin-bottom: 4px;
 }
 
 .product__details__text p {
@@ -3644,7 +3658,7 @@ ol {
 }
 
 .login-page .btn-blue {
-    background-color: #1A237E;
+    background: #0076bd;
     width: 150px;
     color: #fff;
     border-radius: 2px
@@ -3657,7 +3671,7 @@ ol {
 
 .login-page .bg-blue {
     color: #fff;
-    background-color: #1A237E
+    background-color: #00465b;
 }
 
 @media screen and (max-width: 991px) {
