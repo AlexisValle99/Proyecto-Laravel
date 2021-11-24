@@ -63,7 +63,7 @@ Route::get('/thanks', OrderFinished::class)->name('order.finished');
 
 
 // User
-Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/account', UserDashboard::class)->name('user.dashboard');
     
     Route::get('/account/orders', UserOrder::class)->name('user.orders');
@@ -71,7 +71,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 });
 
 // Admin
-Route::middleware(['auth:sanctum', 'verified', 'adminauth'])->group(function () {
+Route::middleware(['auth:sanctum', 'adminauth'])->group(function () {
     Route::get('/dashboard', AdminDashboard::class)->name('admin.dashboard');
     Route::get('/dashboard/categories', AdminCategory::class)->name('admin.categories');
     Route::get('/dashboard/categories/add', AdminAddCategory::class)->name('admin.addcategory');

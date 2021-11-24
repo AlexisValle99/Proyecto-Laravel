@@ -129,7 +129,7 @@ ol {
 	right: 0;
 	height: 4px;
 	width: 80px;
-	background: #cc0e0e;
+	background: #cc0e0e; 
 	content: "";
 	margin: 0 auto;
 }
@@ -1596,6 +1596,8 @@ ol {
 	position: relative;
 	overflow: hidden;
     background: #e8e8e8;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .product__item__pic__hover {
@@ -2446,7 +2448,7 @@ ol {
 }
 
 .blog__sidebar__item ul li a:hover {
-	color: #7fad39;
+	color: #252525;
 }
 
 .blog__sidebar__search {
@@ -3542,8 +3544,6 @@ ol {
 }
 
 .login-page .logo {
-    width: 200px;
-    height: 100px;
     margin-top: 20px;
     margin-left: 35px
 }
