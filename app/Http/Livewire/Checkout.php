@@ -58,13 +58,12 @@ class Checkout extends Component
             'zipcode' => 'required',
             'paymentType' => 'required'
         ]);
-
         $order = new Order();
         $order->user_id = Auth::user()->id;
-        $order->subtotal = session()->get('checkout')['subtotal'];
-        $order->discount = session()->get('checkout')['discount'];
-        $order->taxes = session()->get('checkout')['taxes'];
-        $order->total = session()->get('checkout')['total'];
+        $order->subtotal = floatval(preg_replace('/[^\d.]/', '', session()->get('checkout')['subtotal']));
+        $order->discount = floatval(preg_replace('/[^\d.]/', '', session()->get('checkout')['discount']));
+        $order->taxes = floatval(preg_replace('/[^\d.]/', '', session()->get('checkout')['taxes']));
+        $order->total = floatval(preg_replace('/[^\d.]/', '', session()->get('checkout')['total']));
         $order->firstname = $this->firstname;
         $order->lastname = $this->lastname;
         $order->phone = $this->phone;
@@ -73,6 +72,7 @@ class Checkout extends Component
         $order->line2 = $this->line2;
         $order->city = $this->city;
         $order->country = $this->country;
+        $order->state = $this->state;
         $order->zipcode = $this->zipcode;
         $order->status = 'ordered';
         $order->different_shipping = $this->differentShipping ? 1 : 0;
@@ -111,6 +111,7 @@ class Checkout extends Component
             $shipping->line = $this->aline;
             $shipping->line2 = $this->aline2;
             $shipping->city = $this->acity;
+            $order->country = $this->astate;
             $shipping->country = $this->acountry;
             $shipping->zipcode = $this->azipcode;
             $shipping->save();

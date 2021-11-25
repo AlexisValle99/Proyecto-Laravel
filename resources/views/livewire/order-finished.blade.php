@@ -23,7 +23,7 @@
                 <center>
                     <h2>¡Gracias por tu compra!</h2><br/>
                     <h3>Tu pedido ha sido completado y lo recibirás muy pronto.</h3><br/>
-                    <h4>Un correo electrónico de confirmación ha sido enviado.</h4><br/>
+                 
                     <a href="{{ route('all.products') }}" class="primary-btn" >Continúa comprando</a>
                 </center>
             </div>

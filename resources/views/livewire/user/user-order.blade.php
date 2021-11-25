@@ -60,7 +60,7 @@
                             <td>{{ $order->created_at }}</td>
                             <td>
                             <a href="{{ route('user.showorder',['orderId' => $order->id]) }}" class="btn btn-info" href="#">Ver</a>
-                            @if($order->status != "canceled" || $order->status != "delivered")
+                            @if($order->status == "ordered")
                             <a class="btn btn-danger" href="#" wire:click.prevent="update({{$order->id}})">Cancelar</a>
                             @endif
                             </td>

@@ -25,6 +25,8 @@ use App\Http\Livewire\ProductDetail;
 
 use App\Http\Livewire\OrderFinished;
 
+use App\Http\Controllers\ProductsAPI;
+
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 
@@ -95,3 +97,6 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
 
     return redirect('/');
 })->middleware(['auth', 'signed'])->name('verification.verify');
+
+
+Route::resource('products', ProductsAPI::class);
